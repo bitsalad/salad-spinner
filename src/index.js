@@ -1,7 +1,5 @@
 const template = require('lodash.template');
 
-const host = 'https://api2.bitsalad.co';
-
 const toQueryString = (opts) => {
   const reducer = (a, k) => {
     const part = `${k}=${encodeURIComponent(opts[k])}`;
@@ -30,38 +28,11 @@ const fetch = (url, params, onSuccess) => {
 const defaultTemplate = `
   <div class='bitsalad-img'>
     <% if(options.links) { %>
-      <a href="<%= link%>" target='_blank'>
+      <a href="<%= link %>" target='_blank'>
         <img src="<%= url %>"  width="<%= width %>" height="<%= height %>" />
       </a>
     <% } else { %>
         <img src="<%= url %>"  width="<%= width %>" height="<%= height %>" />
-    <% } %>
-
-    <% if(options.comments || options.likes) {%>
-      <div class='bitsalad-counters'>
-        <% if(options.likes) {%>
-          <span class='bitsalad-likes'>
-            <%= likes.count %>
-          </span>
-        <% } %>
-        <% console.log(options.tags) %>
-        <% if(options.tags) { %>
-          <span class='bitsalad-tags'>
-            <%= tags.join(', ') %>
-          </span>
-        <% } %>
-        <% if(options.comments) { %>
-          <span class='bitsalad-comments'>
-            <%= comments.count %>
-          </span>
-        <% } %>
-      </div>
-    <% } %>
-
-    <% if(options.captions && caption) { %>
-      <div class='bitsalad-caption'>
-        <%= caption.text %>
-      </div>
     <% } %>
   </div>
 `;
@@ -96,20 +67,21 @@ const handleResponse = (data, opts) => {
 const defaultOptions = {
   resolution: 'thumbnail',
   links: false,
-  captions: false,
   sortBy: 'created_time',
-  likes: false,
-  tags: false,
-  comments: false,
   template: defaultTemplate,
   filterByTags: []
 };
 
-const SaladSpinner = (opts) => {
+const SaladSpinner = (opts, host) => {
+  host = host || 'https://api2.bitsalad.co';
+
   opts = Object.assign({}, defaultOptions, opts);
   opts.cachedTemplate = template(opts.template);
 
-  const params = (({feeds, sortBy}) => ({feeds, sortBy}))(opts);
+  const params = {
+    feeds: opts.feeds,
+    sortBy: opts.sortBy
+  };
 
   if (opts.filterByTags.length) params.filterByTags = opts.filterByTags;
 

@@ -1,6 +1,6 @@
 {
   "name": "salad-spinner",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Salad Spinner - embed Instagram media on your website, fast!",
   "main": "lib/salad-spinner.min.js",
   "scripts": {
