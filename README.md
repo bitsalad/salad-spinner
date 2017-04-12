@@ -1,7 +1,7 @@
 ## Salad Spinner
 
 
-Salad Spinner makes it very easy to add Instagram feeds to your website. SaladSpinner your feeds to be authenticated with BitSalad.co, first.
+SaladSpinner makes it very easy to add Instagram feeds to your website. SaladSpinner your feeds to be authenticated with BitSalad.co, first.
 
 ## Installation
 Download the script and include it in your HTML:
