@@ -79,7 +79,7 @@ const SaladSpinner = (opts, host) => {
   opts.cachedTemplate = template(opts.template);
 
   const params = {
-    feeds: opts.feeds,
+    ids: opts.feeds,
     sortBy: opts.sortBy
   };
 

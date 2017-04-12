@@ -1,5 +1,7 @@
 index.html
 
+.DS_Store
+
 # Logs
 logs
 *.log
