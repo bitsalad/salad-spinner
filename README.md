@@ -65,19 +65,3 @@ Basic example:
   }).show();
 </script>
 ```
-
-Notice the `{{link}}` and `{{image}}`? The templating option provides several tags for you to use to control where variables are inserted into your HTML markup. Available keywors are:
-
-
-- `{{type}}` - the image's type. Can be `image` or `video`.
-- `{{width}}` - contains the image's width, in pixels.
-- `{{height}}` - contains the image's height, in pixels.
-- `{{orientation}}` - contains the image's orientation. Can be `square`, `portrait`, or `landscape`.
-- `{{link}}` - URL to view the image on Instagram's website.
-- `{{image}}` - URL of the image source. The size is inherited from the `resolution` option.
-- `{{id}}` - Unique ID of the image. Useful if you want to use [iPhone hooks](http://instagram.com/developer/iphone-hooks/) to open the images directly in the Instagram app.
-- `{{caption}}` - Image's caption text. Defaults to empty string if there isn't one.
-- `{{likes}}` - Number of likes the image has.
-- `{{comments}}` - Number of comments the image has.
-- `{{location}}` - Name of the location associated with the image. Defaults to empty string if there isn't one.
-- `{{model}}` - Full JSON object of the image. If you want to get a property of the image that isn't listed above you access it using dot-notation. (ex: `{{model.filter}}` would get the filter used.)
