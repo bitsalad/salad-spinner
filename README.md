@@ -23,7 +23,7 @@ Fetch and show your feed:
     links: false,
     resolution: 'low_resolution',
     id: 'dom-element-id'
-}).show();
+  }).show();
 </script>
 ```
 
