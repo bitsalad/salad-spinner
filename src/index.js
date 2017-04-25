@@ -80,7 +80,8 @@ const SaladSpinner = (opts, host) => {
 
   const params = {
     ids: opts.users,
-    sortBy: opts.sortBy
+    sortBy: opts.sortBy,
+    limit: opts.limit
   };
 
   if (opts.filterByTags.length) params.filterByTags = opts.filterByTags;
