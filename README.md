@@ -2,7 +2,7 @@
 
 ## SaladSpinner - Easily embed multiple Instagram feeds on your blog or website
 
-SaladSpinner makes it easy to add Instagram feeds to your website. SaladSpinner requires that your feeds be authenticated with BitSalad.co, first.
+SaladSpinner makes it easy to add Instagram feeds to your website. SaladSpinner requires that your feeds be authenticated with [BitSalad.co](http://www.bitsalad.co), first.
 
 ## Installation
 Download the script and include it in your HTML:
