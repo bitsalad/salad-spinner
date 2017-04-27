@@ -69,6 +69,7 @@ const defaultOptions = {
   links: false,
   sortBy: 'created_time',
   template: defaultTemplate,
+  limit: 250,
   filterByTags: []
 };
 
